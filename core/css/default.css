@@ -1,0 +1,148 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial;
+    padding: 10px;
+    background: #000000e1;
+  }
+  
+  /* Header/Blog Title */
+  .header {
+    padding: 30px;
+    text-align: center;
+    background: rgba(255, 255, 255, 17.8%);
+  
+  }
+  
+  .header h1 {
+    color: rgba(255, 255, 255, 87%);
+    font-size: 50px;
+  }
+
+  .header p {
+    color: rgba(255, 255, 255, 87%);
+  }
+  
+  /* Create two unequal columns that floats next to each other */
+  /* Left column */
+  .leftcolumn {   
+    float: left;
+    width: 20%;
+  }
+  
+  /* midle column */
+  .midlecolumn {
+    float: left;
+    width: 80%;
+    padding-left: 20px;
+  }
+
+  /* right column */
+  .rightcolumn {
+    float: left;
+    width: 20%;
+    padding-left: 20px;
+  }
+
+    /* Left column row */
+    .leftcolumnrow {   
+      float: left;
+      width: 50%;
+      height: 20%;
+    }
+  
+    /* right column row */
+    .rightcolumnrow {
+      float: left;
+      width: 50%;
+      height: 20%;
+    }
+
+  /* Add a card effect for articles */
+  .card {
+    padding: 20px;
+    margin-top: 20px;
+  }
+
+  .card h2{
+    color: rgba(255, 255, 255, 87%);
+  }
+
+  .card h3{
+    color: rgba(255, 255, 255, 87%);
+  }
+
+  .card h5{
+    color: rgba(255, 255, 255, 87%);
+  }
+
+  .card p{
+    color: rgba(255, 255, 255, 87%);
+  }
+
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Footer */
+  .footer {
+    padding: 20px;
+    text-align: center;
+    background: rgba(255, 255, 255, 17.8%);
+    margin-top: 20px;
+  }
+
+  .footer h2{
+    color: rgba(255, 255, 255, 87%);
+  }
+  
+  /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {   
+      width: 100%;
+      padding: 0;
+    }
+  }
+  
+  /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+  @media screen and (max-width: 400px) {
+    .topnav a {
+      float: none;
+      width: 100%;
+    }
+  }
+
+ /* background */
+  .background {
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    right: -50%;
+    bottom: -50%;
+    width: 200%;
+    height: 200vh;
+    background: transparent url('noise-transparent.png') repeat 0 0;
+    background-repeat: repeat;
+    animation: background-animation .2s infinite;
+    opacity: .9;
+    visibility: visible;
+  }
+  
+  @keyframes background-animation {
+    0% { transform: translate(0,0) }
+    10% { transform: translate(-5%,-5%) }
+    20% { transform: translate(-10%,5%) }
+    30% { transform: translate(5%,-10%) }
+    40% { transform: translate(-5%,15%) }
+    50% { transform: translate(-10%,5%) }
+    60% { transform: translate(15%,0) }
+    70% { transform: translate(0,10%) }
+    80% { transform: translate(-15%,0) }
+    90% { transform: translate(10%,5%) }
+    100% { transform: translate(5%,0) }
+  }
