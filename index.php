@@ -26,11 +26,11 @@
               <h1 style="text-align: end;">Welcome to pallium</h1>
           </div>
               <div class="card-cyberpunk-wrapper">
-                <form action="core/php/db/login.php" method="post">
+                <form action="core/php/includes/db/login.php" method="post">
                   <h1 style="text-align: left;">Login</h1>
                   <?php
                     echo $form->input('Username');
-                    echo $form->input('Password');
+                    echo $form->inputpsw('Password');
                   ?>
                   <button class="cybr-btn" style="--primary-hue: 200; --primary-lightness: 50;">
                     Login<span aria-hidden>_</span>

@@ -29,7 +29,7 @@
 
     <div class="card-cyberpunk">
         <h1 style="text-align: end;">Register</h1>
-        <button class="cybr-btn" onclick="window.location.href='/'" style="margin-top: -100%; --primary-hue: 140; --primary-lightness: 50;" >
+        <button class="cybr-btn" onclick="window.location.href='../../../../pallium/index.php'" style="margin-top: -100%; --primary-hue: 140; --primary-lightness: 50;" >
             Back<span aria-hidden>_</span>
             <span aria-hidden class="cybr-btn__glitch">Error_</span>
             <span aria-hidden class="cybr-btn__tag">R25</span>
@@ -39,7 +39,7 @@
     <div class="row">
         <div class="leftcolumnrow">
             <div class="card-cyberpunk-wrapper" style="margin-right: 10px">
-            <form method="db/dbregister.php" action="post">
+            <form method="includes/db/dbregister.php" action="post">
                 <?php
                 echo $form->input('Name');
                 echo $form->input('Lastname');
