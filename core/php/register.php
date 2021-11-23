@@ -24,7 +24,7 @@
     $form = new Form($_POST);
 
     if(isset($_GET['reg_err'])){
-        $err = htmlspecialchars($_GET['login_err']);
+        $err = htmlspecialchars($_GET['reg_err']);
 
         switch($err){
           case 'success':
