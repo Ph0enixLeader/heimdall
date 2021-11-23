@@ -23,7 +23,7 @@
     require 'includes/form/form.php';
     $form = new Form($_POST);
 
-    if(isset($_GET['login_err'])){
+    if(isset($_GET['reg_err'])){
         $err = htmlspecialchars($_GET['login_err']);
 
         switch($err){

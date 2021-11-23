@@ -38,4 +38,4 @@
                 }else header('Location:index.php?reg_err=lastname_lenght');
             }else header('Location:index.php?reg_err=name_lenght');
         }else header('Location:index.php?reg_err=already');
-    }
+    }else header('Location:index.php');
