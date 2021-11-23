@@ -1,3 +1,8 @@
+<?php
+  session_start();
+
+?>
+
 <!DOCTYPE html>
 
 <html>
@@ -13,47 +18,19 @@
     
       <div class="background"></div>
     
-            <div class="header">
-                <h1>Pallium</h1>
-            </div>
+        <div class="header">
+          <h1>Pallium</h1>
+        </div>
           
-        <div class="row">
-              <div class="card">
-              <button class="cybr-btn">
-                    Cyber<span aria-hidden>_</span>
-                    <span aria-hidden class="cybr-btn__glitch">Cyber_</span>
-                    <span aria-hidden class="cybr-btn__tag">R25</span>
-                  </button>
-                  <button class="cybr-btn">
-                    Admin<span aria-hidden>_</span>
-                    <span aria-hidden class="cybr-btn__glitch">Admin_</span>
-                    <span aria-hidden class="cybr-btn__tag">J117</span>
-                  </button>
-                  <button class="cybr-btn">
-                    Cyber<span aria-hidden>_</span>
-                    <span aria-hidden class="cybr-btn__glitch">Cyber_</span>
-                    <span aria-hidden class="cybr-btn__tag">R25</span>
-                  </button>
-                  <button class="cybr-btn">
-                    Admin<span aria-hidden>_</span>
-                    <span aria-hidden class="cybr-btn__glitch">Admin_</span>
-                    <span aria-hidden class="cybr-btn__tag">J117</span>
-                  </button>
-                  <button class="cybr-btn">
-                    Cyber<span aria-hidden>_</span>
-                    <span aria-hidden class="cybr-btn__glitch">Cyber_</span>
-                    <span aria-hidden class="cybr-btn__tag">R25</span>
-                  </button>
-                  <button class="cybr-btn">
-                    Admin<span aria-hidden>_</span>
-                    <span aria-hidden class="cybr-btn__glitch">Admin_</span>
-                    <span aria-hidden class="cybr-btn__tag">J117</span>
-                  </button>
-              </div>
-              <div class="card">
-              </div>
-            </div>
+            <div class="row">
+          <div class="card-cyberpunk" style="font-size: 30px;">
+              <h1 style="text-align: end;">Welcome to pallium <?php echo $_SESSION['username']; ?></h1>
           </div>
+              <div class="card-cyberpunk-wrapper">
+                  <h1 style="text-align: left;">Login</h1>
+              </div>
+          </div>
+      </div>
 
           <div class="footer">
           <h2>Footer</h2>

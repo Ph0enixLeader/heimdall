@@ -12,8 +12,30 @@
     <body>
     
     <?php
-    require 'core/php/includes/form/form.php';
-    $form = new Form($_POST);
+      require 'core/php/includes/form/form.php';
+      $form = new Form($_POST);
+
+      if(isset($_GET['login_err'])){
+        $err = htmlspecialchars($_GET['login_err']);
+
+        switch($err){
+          case 'password':
+            ?>
+            <div class="card-cyberpunk">
+              <strong>Erreur</strong>mot de passe incorrect
+            </div>
+          <?php
+          break;
+
+          case 'already':
+            ?>
+            <div class="card-cyberpunk">
+              <strong>Erreur</strong>compte inexistant
+            </div>
+          <?php
+          break;
+        }
+      }
     ?>
       <div class="background"></div>
     

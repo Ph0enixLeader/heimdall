@@ -32,6 +32,7 @@
                             'password' => $password,
                             'ip' => $ip
                             ));
+                            header('Location:index.php?reg_err=success');
                         }else header('Location:index.php?reg_err=password');
                     }else header('Location:index.php?reg_err=username_lenght');
                 }else header('Location:index.php?reg_err=lastname_lenght');

@@ -22,6 +22,60 @@
 <?php
     require 'includes/form/form.php';
     $form = new Form($_POST);
+
+    if(isset($_GET['login_err'])){
+        $err = htmlspecialchars($_GET['login_err']);
+
+        switch($err){
+          case 'success':
+            ?>
+            <div class="card-cyberpunk">
+              <strong>success</strong> inscription reussi
+            </div>
+          <?php
+          break;
+
+          case 'password':
+            ?>
+            <div class="card-cyberpunk">
+              <strong>Erreur</strong>mot de passe
+            </div>
+          <?php
+          break;
+
+          case 'username_lenght':
+            ?>
+            <div class="card-cyberpunk">
+              <strong>Erreur</strong>username trop long
+            </div>
+          <?php
+          break;
+
+          case 'lastname_lenght':
+            ?>
+            <div class="card-cyberpunk">
+              <strong>Erreur</strong>nom de famille trop long
+            </div>
+          <?php
+          break;
+
+          case 'name_lenght':
+            ?>
+            <div class="card-cyberpunk">
+              <strong>Erreur</strong>prenom trop long
+            </div>
+          <?php
+          break;
+
+          case 'already':
+            ?>
+            <div class="card-cyberpunk">
+              <strong>Erreur</strong>compte existant
+            </div>
+          <?php
+          break;
+        }
+      }
 ?>
 
 <link rel="stylesheet" href="../../../../pallium/core/css/default.css">
