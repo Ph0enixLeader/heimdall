@@ -39,21 +39,30 @@
     <div class="row">
         <div class="leftcolumnrow">
             <div class="card-cyberpunk-wrapper" style="margin-right: 10px">
-            <form method="POST" action="#">
+            <form method="db/dbregister.php" action="post">
                 <?php
                 echo $form->input('Name');
-                echo $form->input('Firstname');
+                echo $form->input('Lastname');
                 echo $form->inputemail('Email');
                 ?>
             </div>
         </div>
         <div class="rightcolumnrow">
-        <div class="card-cyberpunk-wrapper" style="margin-left: 10px">
+            <div class="card-cyberpunk-wrapper" style="margin-left: 10px">
                 <?php
                     echo $form->input('Username');
                     echo $form->inputpsw('Password');
-                    echo $form->inputpsw('Confirm password');
+                    echo $form->inputpsw('Password_retype');
                 ?>
+            </div>
+            <div class="card-cyberpunk">
+                <h1 style="text-align: end;">Register</h1>
+                <button class="cybr-btn" style="margin-top: -100%; --primary-hue: 140; --primary-lightness: 50;" >
+                    Back<span aria-hidden>_</span>
+                    <span aria-hidden class="cybr-btn__glitch">Error_</span>
+                    <span aria-hidden class="cybr-btn__tag">R25</span>
+                </button>
+                </form>
             </div>
         </div>
     </div>
