@@ -7,14 +7,14 @@
         $password = htmlspecialchars($_POST['Password']);
 
         $check = $bdd->prepare('SELECT username, email, password FROM pa_accounts WHERE username = ?');
-        $check->execute(array($username));
+        $check->execute(array($Username));
         $data = $check->fetch();
         $row = $check->rowCount();
 
         if($row == 1){
-            $password = hash('sha256', $password);
+            $Password = hash('sha256', $Password);
 
-            if($data['password'] === $password){
+            if($data['password'] === $Password){
                 $_SESSION['user'] = $data['user'];
             }else header('Location:index.php?login_err=password');
         }else header('Location:index.php?login_err=already');
