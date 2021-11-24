@@ -30,7 +30,8 @@
                             'email' => $email,
                             'username' => $username,
                             'password' => $password,
-                            'ip' => $ip
+                            'ip' => $ip,
+                            'token' => bin2hex(openssl_random_pseudo_bytes(64))
                             ));
                             header('Location:index.php?reg_err=success');
                         }else header('Location:index.php?reg_err=password');
