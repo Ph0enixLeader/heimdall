@@ -23,7 +23,7 @@
                             $password = hash('sha256' $password);
                             $ip = $_SERVER['REMOTE_ADDR'];
 
-                            $insert = $bdd->prepare('INSERT INTO ap_accounts(name, lastname, email, username, password, ip) VALUES(:name, :lastname, :email, :username, :password, :ip)');
+                            $insert = $bdd->prepare('INSERT INTO ap_accounts(name, lastname, email, username, password, ip, token) VALUES(:name, :lastname, :email, :username, :password, :ip, :token)');
                             $insert->execute(array(
                             'name' => $name,
                             'lastname' => $lastname,
