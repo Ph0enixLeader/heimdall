@@ -93,7 +93,7 @@
     <div class="row">
         <div class="leftcolumnrow">
             <div class="card-cyberpunk-wrapper" style="margin-right: 10px">
-            <form method="includes/db/dbregister.php" action="post">
+            <form action="includes/db/dbregister.php" methode="post">
                 <?php
                 echo $form->input('Name');
                 echo $form->input('Lastname');
