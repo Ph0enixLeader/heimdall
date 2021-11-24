@@ -11,7 +11,7 @@
         $data = $check->fetch();
         $row = $check->rowCount();
 
-        if($row == 1){
+        if($row > 0){
             $password = hash('sha256', $password);
 
             if($data['password'] === $password){
