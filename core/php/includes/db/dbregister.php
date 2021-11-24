@@ -34,6 +34,7 @@
                             'token' => bin2hex(openssl_random_pseudo_bytes(64))
                             ));
                             header('Location:index.php?reg_err=success');
+                            die();
                         }else header('Location:index.php?reg_err=password');
                     }else header('Location:index.php?reg_err=username_lenght');
                 }else header('Location:index.php?reg_err=lastname_lenght');
