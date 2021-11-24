@@ -12,8 +12,6 @@
     <body>
     
     <?php
-      require 'core/php/includes/form/form.php';
-      $form = new Form($_POST);
 
       if(isset($_GET['login_err'])){
         $err = htmlspecialchars($_GET['login_err']);
