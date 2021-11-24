@@ -1,5 +1,4 @@
 <?php
-    session_start();
     require_once 'config.php';
 
     if(issets($_POST['Name']) && isset($_POST['Lastname']) && $_POST['Email']) && isset($_POST['Username']) && $_POST['Password']) && isset($_POST['Password_retype'])){
