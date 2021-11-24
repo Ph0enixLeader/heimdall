@@ -20,7 +20,7 @@
                 if(strlen($lastname) <= 100){
                     if(strlen($username) <= 100){
                         if($password == $password_retype){
-                            $password = hash('hash256' $password);
+                            $password = hash('sha256' $password);
                             $ip = $_SERVER['REMOTE_ADDR'];
 
                             $insert = $bdd->prepare('INSERT INTO ap_accounts(name, lastname, email, username, password, ip) VALUES(:name, :lastname, :email, :username, :password, :ip)');
