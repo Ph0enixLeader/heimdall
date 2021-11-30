@@ -174,27 +174,7 @@
   }
   
   .cybr-btn:nth-of-type(1) {
-    --primary-hue: 300;
-    --primary-lightness: 50;
-  }
-
-  .cybr-btn:nth-of-type(2) {
-    --primary-hue: 200;
-    --primary-lightness: 50;
-  }
-
-  .cybr-btn:nth-of-type(3) {
-    --primary-hue: 270;
-    --primary-lightness: 50;
-  }
-
-  .cybr-btn:nth-of-type(4) {
-    --primary-hue: 60;
-    --primary-lightness: 50;
-  }
-
-  .cybr-btn:nth-of-type(5) {
-    --primary-hue: 105;
+    --primary-hue: 202;
     --primary-lightness: 50;
   }
 

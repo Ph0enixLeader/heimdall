@@ -9,19 +9,19 @@
   }
   
   /* Header/Blog Title */
-  .header {
+  .Header {
     padding: 30px;
     text-align: center;
     background: rgba(255, 255, 255, 17.8%);
   
   }
   
-  .header h1 {
+  .Header h1 {
     color: rgba(255, 255, 255, 87%);
     font-size: 50px;
   }
 
-  .header p {
+  .Header p {
     color: rgba(255, 255, 255, 87%);
   }
   
@@ -47,16 +47,18 @@
   }
 
     /* Left column row */
-    .leftcolumnrow {   
+    .leftcolumnrow { 
+      margin-right: 1%;  
       float: left;
-      width: 50%;
+      width: 48.5%;
       height: 20%;
     }
   
     /* right column row */
     .rightcolumnrow {
+      margin-left: 1%;
       float: left;
-      width: 50%;
+      width: 48.5%;
       height: 20%;
     }
 
@@ -90,14 +92,14 @@
   }
   
   /* Footer */
-  .footer {
+  .Footer {
     padding: 20px;
     text-align: center;
     background: rgba(255, 255, 255, 17.8%);
     margin-top: 20px;
   }
 
-  .footer h2{
+  .Footer h2{
     color: rgba(255, 255, 255, 87%);
   }
   
