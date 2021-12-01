@@ -13,6 +13,7 @@ const db = mysql.createConnection({
       <div className="Testdb"><h1>Connecté à la base de données MySQL!</h1></div>
       console.log("Connecté à la base de données MySQL!");
     });
+    <div className="Testdb"><h1>non connecter</h1></div>
   }
 
   export default Testdb;
