@@ -1,6 +1,3 @@
-import React from "react";
-import { NavLink } from 'react-router-dom';
-
 const mysql = require('mysql');
 
 const db = mysql.createConnection({
