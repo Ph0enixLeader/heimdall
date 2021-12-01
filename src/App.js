@@ -4,7 +4,7 @@ import Login from './pages/Login';
 import About from './pages/About';
 import Notfound from './pages/Notfound';
 import Register from './pages/Register';
-import Testdb from './pages/mysql';
+import Testdb from './pages/Mysql';
 
 const App = () => {
   return (
