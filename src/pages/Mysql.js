@@ -7,10 +7,12 @@ const db = mysql.createConnection({
     database: "dbheimdall"
   });
 
-  db.connect(function(err) {
-    if (err) throw err;
-    <div><h1>Connecté à la base de données MySQL!</h1></div>
-    console.log("Connecté à la base de données MySQL!");
-  });
+  const Testdb = () =>{
+    db.connect(function(err) {
+      if (err) throw err;
+        <div><h1>Connecté à la base de données MySQL!</h1></div>
+      console.log("Connecté à la base de données MySQL!");
+    });
+  }
 
   export default mysql;

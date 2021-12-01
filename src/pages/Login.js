@@ -22,10 +22,10 @@ const Login = () => {
                     <NavLink exact to="/">
                     <Cyberbutton name="Login" tags="J117"/>
                     </NavLink>
-                    <NavLink exact to="./mysql">
+                    <NavLink exact to="./Mysql">
                     <Cyberbutton name="Forgot password" tags="J117"/>
                     </NavLink>
-                    <NavLink exact to="./register">
+                    <NavLink exact to="./Register">
                     <Cyberbutton name="Register" tags="J117"/>
                     </NavLink>
                 </div>
