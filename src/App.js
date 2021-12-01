@@ -4,7 +4,7 @@ import Login from './pages/Login';
 import About from './pages/About';
 import Notfound from './pages/Notfound';
 import Register from './pages/Register';
-import Testdb from '/pages/Testdb';
+import mysql from './pages/Mysql';
 
 const App = () => {
   return (
@@ -13,7 +13,7 @@ const App = () => {
         <Route exact path="/" component={Login} />
         <Route exact path="/about" component={About} />
         <Route exact path="/register" component={Register}/>
-        <Route exact path="/testdb" component={Testdb}/>
+        <Route exact path="/mysql" component={mysql}/>
         <Route component={Notfound} />
       </Switch>
     </BrowserRouter>
