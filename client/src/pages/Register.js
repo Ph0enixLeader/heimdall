@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Axios from 'axios';
-import Footer from "../components/Footer";
-import Header from "../components/Header";
 import { NavLink } from 'react-router-dom';
 
+import Footer from "../components/Footer";
+import Header from "../components/Header";
 import Cyberbutton from "../components/cyberpunk/Cyber-buttons";
 import InputTxt from "../components/cyberpunk/Cyber-input-txt";
 import InputEmail from "../components/cyberpunk/Cyber-input-email";
@@ -24,9 +24,7 @@ const submit = () => {
         Email: Email,
         Username: Username,
         Password: Password,
-    }).then(() => {
-        alert('Successful insert');
-    });
+    });alert('Successful insert');
 };
 
     return(
@@ -62,5 +60,6 @@ const submit = () => {
             <Footer/>
         </div>
     );
-}
+};
+
 export default Register;
