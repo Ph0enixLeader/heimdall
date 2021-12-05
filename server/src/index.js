@@ -23,7 +23,7 @@ const db = mysql.createConnection({
     const Username = req.body.Username;
     const Password = req.body.Password;
     
-    const sqlInsert = "INSERT INTO he_accounts (name, lastname, email, username, password, ip, token) VALUES (?, ?, ?, ?, ?, NULL, NULL)";
+    const sqlInsert = "INSERT INTO he_accounts (name, lastname, email, username, password) VALUES (?, ?, ?, ?, ?)";
     db.query(sqlInsert, [Name, Lastname, Email, Username, Password], (err, result) => {
         console.log(err);
     });
