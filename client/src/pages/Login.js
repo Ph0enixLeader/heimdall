@@ -34,7 +34,6 @@ function Login (){
           if (response.data.loggedIn === true) {
             setLoginStatus(response.data.user[0].username);
             console.log(response);
-            return <Redirect exact to="./Home"/>;
           }
         });
       }, []);

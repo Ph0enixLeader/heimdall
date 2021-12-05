@@ -27,9 +27,9 @@ app.use(
       key: "userId",
       secret: "subscribe",
       resave: false,
-      saveUninitialized: true,
+      saveUninitialized: false,
       cookie: {
-        expires: 60 * 60 * 24,
+        expires: 24 * 60 * 60 * 1000,
       },
     })
   );
