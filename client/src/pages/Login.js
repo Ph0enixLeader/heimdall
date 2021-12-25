@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Axios from 'axios';
-import { NavLink, Redirect } from 'react-router-dom';
+import { NavLink, useHistory } from 'react-router-dom';
 
 import Footer from "../components/Footer";
 import Header from "../components/Header";
@@ -13,6 +13,7 @@ function Login (){
     const [Password, setPassword] = useState("");
 
     const [loginStatus, setLoginStatus] = useState("");
+    const history = useHistory();
 
     Axios.defaults.withCredentials = true;
     
@@ -24,7 +25,7 @@ function Login (){
           if (response.data.message) {
             setLoginStatus(response.data.message);
           } else {
-            setLoginStatus(response.data[0].username);
+            history.push("/Home");
           }
         });
       };
@@ -32,11 +33,12 @@ function Login (){
       useEffect(() => {
         Axios.get("http://localhost:3001/api/login").then((response) => {
           if (response.data.loggedIn === true) {
-            setLoginStatus(response.data.user[0].username);
+            history.push("/Home");
+          } else {
             console.log(response);
-          }
+          };
         });
-      }, []);
+      },);
 
     return(
         <div className="Login">
@@ -56,9 +58,7 @@ function Login (){
                     <NavLink exact to="./register">
                     <Cyberbutton name="Register" tags="J117"/>
                     </NavLink>
-                    <NavLink exact to="/">
                     <Cyberbutton name="Login" tags="J117" action={submit}/>
-                    </NavLink>
                 </div>
             </div>
             <Footer/>

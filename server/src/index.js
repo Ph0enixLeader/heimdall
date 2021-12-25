@@ -29,7 +29,7 @@ app.use(
       resave: false,
       saveUninitialized: false,
       cookie: {
-        expires: 24 * 60 * 60 * 1000,
+        expires: 31557600000,
       },
     })
   );
@@ -69,7 +69,7 @@ app.get("/api/login", (req, res) => {
     if (req.session.user) {
       res.send({ loggedIn: true, user: req.session.user });
     } else {
-        res.send({ loggedIn: true });
+        res.send({ loggedIn: false });
       }
     });
 
@@ -101,6 +101,24 @@ app.post("/api/login", (req, res) => {
         }
       );
     });
+
+    // @desc    Logout controller to clear cookie and token
+    // @route   GET /api/auth/logout
+    // @access  Private
+      const logout = async (req, res) => {
+        // Set token to none and expire after 5 seconds
+        res.cookie('token', 'none', {
+        expires: new Date(Date.now() + 5 * 1000),
+        httpOnly: true,
+      })
+    res
+      .status(200)
+      .json({ success: true, message: 'User logged out successfully' })
+    }
+
+      module.exports = {
+        logout,
+      }
 
 app.listen(3001, () => {
     console.log("running on port 3001");
